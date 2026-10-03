@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website for Demarcus Studmire, aspiring software engineer and computer science student.">
+    <title>Demarcus Studmire | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation: provides quick links to the main sections of the portfolio. -->
+    <header class="nav">
+        <div class="nav_left">
+            <div class="brand-mark">DS</div>
+            <span>DeMarcus Studmire</span>
+        </div>
+        <nav class="nav_right" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Some layout ideas were refined during a previous AI-assisted lab; the final HTML/CSS was reviewed and organized for this assignment. -->
+    <main>
+        <!-- Hero section: introduces me and provides quick links to projects, resume, and GitHub. -->
+        <section class="hero_section">
+            <div class="intro_section">
+                <p class="eyebrow">Hi, I'm</p>
+                <h1>DeMarcus Studmire</h1>
+                <h2>Aspiring Software Engineer</h2>
+                <p class="hero-copy">
+                    I’m a Computer Science student at UAB focused on software development, web development,
+                    and object-oriented programming. I’m currently strengthening my Java, data structures,
+                    and frontend development skills while building projects that show my growth as a developer.
+                </p>
+
+                <div class="header_buttons">
+                    <a href="#projects" class="view_project">
+                        <img src="./view-svgrepo-com.svg" alt="View projects icon">
+                        <span>View Projects</span>
+                    </a>
+                    <a href="./Demarcus Studmire Resume 1.pdf" download>
+                        <img src="./download-svgrepo-com.svg" alt="Download resume icon">
+                        <span>Download Resume</span>
+                    </a>
+                    <a href="https://github.com/DevDem01" target="_blank" rel="noopener noreferrer">
+                        <img src="./github-svgrepo-com (1).svg" alt="GitHub logo">
+                        <span>GitHub</span>
+                    </a>
+                </div>
+
+                <div class="contact_symbols" aria-label="Social links">
+                    <a href="https://www.linkedin.com/in/demarcuss/" target="_blank" rel="noopener noreferrer">
+                        <img src="./linkedin-svgrepo-com.svg" alt="LinkedIn logo">
+                    </a>
+                    <a href="mailto:d0529s@uab.edu">
+                        <img src="./mail-open-svgrepo-com.svg" alt="Email icon">
+                    </a>
+                    <a href="https://github.com/DevDem01" target="_blank" rel="noopener noreferrer">
+                        <img src="./github-svgrepo-com (1).svg" alt="GitHub logo">
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero_image_wrap">
+                <img src="./Screenshot 2024-01-15 154623.png" alt="Portrait of Demarcus Studmire">
+            </div>
+        </section>
+
+        <!-- About + Skills section: summarizes my background and current technical skills. -->
+        <section class="About_Me_section" id="about">
+            <div class="about-me-right">
+                <div class="about_title_right">
+                    <img src="./profile-svgrepo-com.svg" alt="Profile icon">
+                    <h3>About Me</h3>
+                </div>
+                <div class="inside">
+                    <p>
+                        I’m Demarcus Studmire, an aspiring software developer and Computer Science student with a minor in
+                        Mathematics. I enjoy building clean, user-friendly websites and learning how technology can solve
+                        real-world problems. I’m currently developing my skills in programming, web development, data
+                        structures, and problem solving. My goal is to become a strong software engineer who creates useful
+                        applications and continues growing every day.
+                    </p>
+                    <div class="right-img">
+                        <img src="./laptop-interface-icon-svgrepo-com.svg" alt="Laptop interface illustration">
+                    </div>
+                </div>
+            </div>
+
+            <div class="about_me_left" id="skills">
+                <div class="about_title_left">
+                    <img src="./server-minimalistic-svgrepo-com.svg" alt="Server icon">
+                    <h3>Skills</h3>
+                </div>
+                <div class="skills-container">
+                    <div class="skills-list">
+                        <div class="skill">☕ Java</div>
+                        <div class="skill">🐍 Python</div>
+                        <div class="skill">🌐 HTML</div>
+                        <div class="skill">🎨 CSS</div>
+                        <div class="skill">⚡ JavaScript</div>
+                        <div class="skill">🐙 GitHub</div>
+                        <div class="skill">💻 VS Code</div>
+                        <div class="skill">🧱 OOP</div>
+                        <div class="skill">🗄️ SQL</div>
+                        <div class="skill">🅱️ Bootstrap</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects section: highlights selected coursework and development projects. -->
+        <section class="projects_section" id="projects">
+            <div class="section_heading">
+                <p class="eyebrow">Featured Work</p>
+                <h3>Projects</h3>
+            </div>
+
+            <div class="projects_grid">
+                <article class="project_card">
+                    <span class="project-tag">Web Design</span>
+                    <h4>Personal Portfolio</h4>
+                    <p>
+                        A responsive portfolio site to showcase my skills, projects, and contact information in a modern and
+                        polished layout.
+                    </p>
+                </article>
+
+                <article class="project_card">
+                    <span class="project-tag">Java</span>
+                    <h4>Data Structures Practice</h4>
+                    <p>
+                        Java-based assignments and exercises focused on arrays, linked lists, stacks, queues, and sorting
+                        algorithms to strengthen problem-solving skills.
+                    </p>
+                </article>
+
+                <article class="project_card">
+                    <span class="project-tag">Python</span>
+                    <h4>Automation & Tools</h4>
+                    <p>
+                        Small Python projects designed to improve productivity, manipulate data, and explore automation
+                        concepts within software development.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact section: provides ways to reach me professionally. -->
+        <section class="contact_section" id="contact">
+            <div class="section_heading">
+                <p class="eyebrow">Let’s Connect</p>
+                <h3>Contact Me</h3>
+            </div>
+
+            <div class="contact_box">
+                <div>
+                    <p>Email</p>
+                    <a href="mailto:d0529s@uab.edu">d0529s@uab.edu</a>
+                </div>
+                <div>
+                    <p>LinkedIn</p>
+                    <a href="https://www.linkedin.com/in/demarcuss/" target="_blank" rel="noopener noreferrer">linkedin.com/in/demarcuss</a>
+                </div>
+                <div>
+                    <p>GitHub</p>
+                    <a href="https://github.com/DevDem01" target="_blank" rel="noopener noreferrer">github.com/DevDem01</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer: closes the page with copyright information. -->
+    <footer class="site_footer">
+        <p>© 2026 Demarcus Studmire</p>
+    </footer>
+</body>
+
+</html>

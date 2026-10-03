@@ -1,0 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:radial-gradient(#5500FC,#0200FC,#0200FC);
+}
