@@ -421,6 +421,70 @@ h2 {
     font-weight: 500;
 }
 
+.contact_section > .contact_form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 1.8rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-field label {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(7, 17, 31, 0.72);
+    color: var(--text);
+    font: inherit;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.form-message {
+    grid-column: 1 / -1;
+}
+
+.contact-submit {
+    justify-self: start;
+    padding: 0.85rem 1.2rem;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #05111d;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(103, 232, 249, 0.2);
+}
+
+.contact_links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 /* Footer styling */
 .site_footer {
     padding: 1.2rem 0 2.6rem;
@@ -433,7 +497,7 @@ h2 {
     .hero_section,
     .About_Me_section,
     .projects_grid,
-    .contact_box {
+    .contact_links {
         grid-template-columns: 1fr;
     }
 
@@ -468,5 +532,14 @@ h2 {
 
     .contact_symbols {
         justify-content: flex-start;
+    }
+
+    .contact_section > .contact_form {
+        grid-template-columns: 1fr;
+        padding: 1.25rem;
+    }
+
+    .form-message {
+        grid-column: auto;
     }
 }

@@ -60,8 +60,8 @@
                     <a href="https://www.linkedin.com/in/demarcuss/" target="_blank" rel="noopener noreferrer">
                         <img src="./linkedin-svgrepo-com.svg" alt="LinkedIn logo">
                     </a>
-                    <a href="mailto:d0529s@uab.edu">
-                        <img src="./mail-open-svgrepo-com.svg" alt="Email icon">
+                    <a href="#contact" aria-label="Contact me using the form">
+                        <img src="./mail-open-svgrepo-com.svg" alt="">
                     </a>
                     <a href="https://github.com/DevDem01" target="_blank" rel="noopener noreferrer">
                         <img src="./github-svgrepo-com (1).svg" alt="GitHub logo">
@@ -154,18 +154,31 @@
             </div>
         </section>
 
-        <!-- Contact section: provides ways to reach me professionally. -->
+        <!-- Contact section: provides a form for messages and links to professional profiles. -->
         <section class="contact_section" id="contact">
             <div class="section_heading">
                 <p class="eyebrow">Let’s Connect</p>
                 <h3>Contact Me</h3>
             </div>
 
-            <div class="contact_box">
-                <div>
-                    <p>Email</p>
-                    <a href="mailto:d0529s@uab.edu">d0529s@uab.edu</a>
+            <form class="contact_box contact_form" action="https://formsubmit.co/d0529s@uab.edu" method="POST">
+                <input type="hidden" name="_subject" value="New message from your portfolio">
+                <div class="form-field">
+                    <label for="contact-name">Name</label>
+                    <input id="contact-name" name="name" type="text" autocomplete="name" required>
                 </div>
+                <div class="form-field">
+                    <label for="contact-email">Email address</label>
+                    <input id="contact-email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="form-field form-message">
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" rows="5" required></textarea>
+                </div>
+                <button class="contact-submit" type="submit">Send Message</button>
+            </form>
+
+            <div class="contact_box contact_links">
                 <div>
                     <p>LinkedIn</p>
                     <a href="https://www.linkedin.com/in/demarcuss/" target="_blank" rel="noopener noreferrer">linkedin.com/in/demarcuss</a>
