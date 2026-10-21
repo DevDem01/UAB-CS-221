@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f2ed;
+    color: #24312d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-header {
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    padding: 1.1rem 1rem;
+    border-bottom: 3px solid #315c53;
+    background: rgb(250 249 246 / 96%);
+    text-align: center;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+}
+
+.site-header p {
+    margin: 0.35rem 0 0;
+    color: #5b6963;
+}
+
+main {
+    width: min(940px, calc(100% - 2rem));
+    margin: 2rem auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20.2px;
+    justify-items: center;
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border: 4px solid #315c53;
+    border-radius: 14px;
+    background-color: #cbd5cf;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 5px 14px rgb(36 49 45 / 14%);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+/* Dashed borders make alternating tiles easy to distinguish. */
+.gallery-item:nth-child(even) {
+    border-style: dashed;
+}
+
+.photo-beach {
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85");
+}
+
+.photo-lake {
+    background-image: url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=85");
+}
+
+.photo-sunset {
+    background-image: url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=85");
+}
+
+.photo-wilderness {
+    background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85");
+}
+
+.photo-waves {
+    background-image: url("https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=900&q=85");
+}
+
+.photo-alpine {
+    background-image: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=85");
+}
+
+.gallery-item:not(.no-zoom):hover {
+    z-index: 2;
+    transform: scale(1.035);
+    box-shadow: 0 12px 24px rgb(36 49 45 / 28%);
+}
+
+/* The gradient keeps the caption readable over photographs of any brightness. */
+.gallery-item:not(.no-zoom):hover::before {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    background: linear-gradient(transparent 35%, rgb(0 0 0 / 75%));
+    color: #fff;
+    content: attr(data-caption);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.gallery-item:not(.no-zoom):hover::after {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    content: "\1F50D";
+    font-size: 2.4rem;
+    line-height: 1;
+    text-shadow: 0 2px 8px rgb(0 0 0 / 80%);
+    transform: translate(-50%, -50%);
+}
+
+footer {
+    padding: 0 1rem 1.5rem;
+    color: #5b6963;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        width: min(300px, calc(100% - 2rem));
+    }
+
+    .gallery {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery-item {
+        transition: none;
+    }
+
+    .gallery-item:not(.no-zoom):hover {
+        transform: none;
+    }
+}
