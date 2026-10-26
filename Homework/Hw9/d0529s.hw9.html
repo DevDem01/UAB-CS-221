@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A browser-console program that checks whether a number is even or odd.">
+    <title>Homework 9: Even or Odd | d0529s</title>
+    <style>
+        body {
+            margin: 2rem;
+            background-color: #e8f1f5;
+            color: #203744;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+        }
+
+        main {
+            max-width: 42rem;
+            margin: 0 auto;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            background-color: #fff;
+        }
+    </style>
+
+    <script>
+        // Ask for text first so the program can validate the user's input.
+        const response = prompt("Enter a whole number to check if it is even or odd:");
+
+        // Convert the response to a number, while preserving the empty-input case.
+        const number = response === null || response.trim() === ""
+            ? NaN
+            : Number(response);
+
+        // Only integers can be classified as even or odd; reject non-numbers,
+        // decimals, and values too large for JavaScript to represent finitely.
+        if (!Number.isFinite(number) || !Number.isInteger(number)) {
+            console.log("Invalid input. Please enter a whole number.");
+        } else if (number % 2 === 0) {
+            // A whole number with no remainder when divided by 2 is even.
+            console.log(`${number} is even.`);
+        } else {
+            // Any other whole number has a remainder of 1 (or -1) and is odd.
+            console.log(`${number} is odd.`);
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <h1>Homework 9: Even or Odd</h1>
+        <p>The prompt asks for a whole number when this page loads.</p>
+        <p>Open your browser's Developer Tools console to see whether the number is even, odd, or invalid.</p>
+    </main>
+</body>
+</html>
